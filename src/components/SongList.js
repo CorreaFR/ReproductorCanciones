@@ -8,7 +8,7 @@ const extractYoutubeId = (url) => {
 };
 
 const SongList = ({ songs, onPlay, onDelete }) => {
-  if (songs.length === 0) return <p>No hay canciones guardadas.</p>;
+  if (songs.length === 0) return <p>Aún no se han agregado canciones.</p>;
 
   return (
     <div className="row g-2">

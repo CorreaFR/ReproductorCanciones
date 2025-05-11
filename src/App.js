@@ -177,7 +177,6 @@ function App() {
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <button
             className="btn btn-clear-all"
-            style={{ minWidth: '180px' }}
             onClick={handleClearAll}
             title="Eliminar todas las canciones guardadas"
           >
@@ -187,7 +186,6 @@ function App() {
 
           <button
             className="btn btn-outline-secondary"
-            style={{ minWidth: '220px' }}
             onClick={() => setIsSorted(!isSorted)}
             title={isSorted ? 'Ordenar por inclusión' : 'Ordenar por reproducciones'}
           >
