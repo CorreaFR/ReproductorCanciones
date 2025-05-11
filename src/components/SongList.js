@@ -11,7 +11,7 @@ const SongList = ({ songs, onPlay, onDelete }) => {
   if (songs.length === 0) return <p>No hay canciones guardadas.</p>;
 
   return (
-    <div className="row g-3">
+    <div className="row g-2">
       {songs.map((song, index) => (
         <div key={index} className="col-12">
           <div className="card song-card shadow-sm p-3 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">

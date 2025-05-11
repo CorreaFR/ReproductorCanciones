@@ -93,7 +93,10 @@ function App() {
   };
 
   const handleExport = (format = 'json') => {
-    if (!songs.length) return;
+    if (!songs.length) {
+      alert('⚠️ No hay canciones para exportar.');
+      return;
+    }
 
     const dataStr = format === 'json'
       ? JSON.stringify(songs, null, 2)
@@ -145,13 +148,14 @@ function App() {
             onClick={() => handleExport('json')}
             title="Descargar la lista de canciones como archivo JSON"
           >
-            <i className="bi bi-download me-2"></i>Exportar lista
+            <i className="bi bi-download me-2"></i>Exportar
           </button>
 
           <button
             className={`btn ${theme === 'light' ? 'btn-outline-dark' : 'btn-outline-light'}`}
             style={{ minWidth: '160px' }}
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            title={theme === 'light' ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro'}
           >
             <i className={`bi ${theme === 'light' ? 'bi-moon' : 'bi-sun'} me-2`}></i>
             {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
@@ -185,9 +189,10 @@ function App() {
             className="btn btn-outline-secondary"
             style={{ minWidth: '220px' }}
             onClick={() => setIsSorted(!isSorted)}
+            title={isSorted ? 'Ordenar por inclusión' : 'Ordenar por reproducciones'}
           >
             <i className={`bi ${isSorted ? 'bi-arrow-down-up' : 'bi-sort-down'} me-2`}></i>
-            {isSorted ? 'Orden original' : 'Ordenar por reproducciones'}
+            {isSorted ? 'Ordenar' : 'Ordenar'}
           </button>
         </div>
 
@@ -217,7 +222,7 @@ function App() {
       </div>
 
       <footer className="text-center mt-5 pt-4 pb-2 mb-3 border-top small text-muted">
-        © {new Date().getFullYear()} Reproductor de Canciones - Hecho por Federico Correa
+        © {new Date().getFullYear()} Reproductor de Canciones - Por Federico Correa
       </footer>
     </>
   );

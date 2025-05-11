@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import './VideoModal.css';
 
 Modal.setAppElement('#root');
 
@@ -21,7 +22,9 @@ const customStyles = {
     overflow: 'hidden',
   },
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backdropFilter: 'blur(8px)',
+    WebkitBackdropFilter: 'blur(8px)',
     zIndex: 1050,
     transition: 'opacity 0.3s ease-in-out',
   },
@@ -43,11 +46,12 @@ const VideoModal = ({ isOpen, onRequestClose, youtubeUrl }) => {
       onRequestClose={onRequestClose}
       style={customStyles}
       contentLabel="Reproductor de Video"
+      closeTimeoutMS={300}
     >
       <div className="d-flex justify-content-between align-items-center px-3 py-2 border-bottom bg-light">
         <h5 className="mb-0 text-dark">
           <i className="bi bi-camera-reels me-2"></i>
-          Videoclip
+          Reproduciendo VideoClip
         </h5>
         <button
           type="button"

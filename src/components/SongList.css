@@ -10,6 +10,7 @@
 .song-card:hover {
   background-color: var(--bs-light);
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  border-color: #2e86abab;
 }
 
 .song-info {

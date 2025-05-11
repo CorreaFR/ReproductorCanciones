@@ -60,7 +60,7 @@ const AddSongForm = ({ onAddSong, formError }) => {
         />
       </div>
 
-      <button type="submit" className="btn btn-agregar">
+      <button type="submit" className="btn btn-agregar" title="Agregar canción a la lista">
         <i className="bi bi-plus-circle me-2"></i>
         Agregar
       </button>
