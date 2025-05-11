@@ -1,0 +1,117 @@
+/* FUENTES BASE */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* MODO OSCURO */
+body.bg-dark {
+  background-color: #121212 !important;
+}
+
+body.bg-dark input::placeholder,
+body.bg-dark textarea::placeholder,
+body.bg-dark select::placeholder {
+  color: #bbb;
+  opacity: 1;
+}
+
+body.bg-dark .card,
+body.bg-dark input,
+body.bg-dark textarea,
+body.bg-dark select {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+body.bg-dark .form-label,
+body.bg-dark footer {
+  color: #aaa !important;
+}
+
+/* BOTONES PERSONALIZADOS */
+.btn-agregar {
+  background-color: #2E86AB;
+  color: white;
+  border: none;
+}
+
+.btn-agregar:hover {
+  background-color: #2b7da0;
+}
+
+.btn-play {
+  background-color: #73A580;
+  color: white;
+  border: none;
+}
+
+.btn-play:hover {
+  background-color: #6a9776;
+}
+
+.btn-delete {
+  background-color: #D36135;
+  color: white;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #c55b31;
+}
+
+.btn-clear-all {
+  color: #D36135;
+  border: 1px solid #D36135;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-clear-all:hover {
+  background-color: #c55b31;
+  color: white;
+}
+
+body.bg-dark .btn-agregar,
+body.bg-dark .btn-play,
+body.bg-dark .btn-delete {
+  filter: brightness(1.05);
+}
+
+/* PAGINACIÓN PERSONALIZADA */
+.custom-pagination .page-btn {
+  background-color: transparent;
+  border: 1px solid #7a7a7a;
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease-in-out;
+  color: #7a7a7a;
+}
+
+.custom-pagination .page-btn:hover,
+.custom-pagination .page-btn.active {
+  background-color: #7a7a7a;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body.bg-dark .custom-pagination .page-btn {
+  border-color: #999;
+  color: #999;
+}
+
+body.bg-dark .custom-pagination .page-btn:hover,
+body.bg-dark .custom-pagination .page-btn.active {
+  background-color: #707070;
+  border-color: #ffffff;
+  color: #ffffff;
+}

@@ -1,0 +1,68 @@
+.song-card {
+  min-height: 100px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bs-light);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.song-card:hover {
+  background-color: var(--bs-light);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+.song-info {
+  flex: 1;
+  min-width: 40%;
+  overflow: hidden;
+}
+
+.text-truncate {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.same-size-btn {
+  min-width: 100px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.plays-badge {
+  min-width: 60px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+body.bg-dark .song-card {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+body.bg-dark .song-card:hover {
+  background-color: #2a2a2a;
+}
+
+body.bg-dark .card,
+body.bg-dark input,
+body.bg-dark textarea,
+body.bg-dark select {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+body.bg-dark .form-label {
+  color: #ddd;
+}
